@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Global Flavors Restaurant Order Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('C:/Users/abhin/Documents/menu.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+            padding: 30px;
+            max-width: 700px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #c5e62f;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Cinzel',serif;
+        }
+
+        .form-group label {
+            color: #444;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #28a745;
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: -10px;
+        }
+
+        .success {
+            color: green;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        select.form-control {
+            padding: 12px;
+            height: 50px;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Order Form</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name" style="color: #1cc272;">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <span id="nameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" style="color: #1cc272;">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" style="color: #1cc272;">Phone Number:</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                <span id="phoneError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="cuisine" style="color: #1cc272;">Cuisine Type:</label>
+                <select id="cuisine" class="form-control">
+                    <option value="">Select a dish</option>
+                    <!-- Italian Cuisines -->
+                    <optgroup label="Italian Cuisines">
+                        <option value="Pizza">Pizza</option>
+                        <option value="Spaghetti">Spaghetti</option>
+                        <option value="Truffle Pasta">Truffle Pasta</option>
+                        <option value="Mushroom Risotto">Mushroom Risotto</option>
+                    </optgroup>
+
+                    <!-- Greek Cuisines -->
+                    <optgroup label="Greek Cuisines">
+                        <option value="Moussaka">Moussaka</option>
+                        <option value="Greek Salad">Greek Salad</option>
+                        <option value="Spanakopita">Spanakopita</option>
+                        <option value="Dolmades">Dolmades</option>
+                    </optgroup>
+
+                    <!-- Spanish Cuisines -->
+                    <optgroup label="Spanish Cuisines">
+                        <option value="Paella">Paella</option>
+                        <option value="Patatas Bravas">Patatas Bravas</option>
+                        <option value="Gazpacho">Gazpacho</option>
+                        <option value="Churros">Churros</option>
+                    </optgroup>
+
+                    <!-- Indian Cuisines -->
+                    <optgroup label="Indian Cuisines">
+                        <option value="Biriyani">Biriyani</option>
+                        <option value="Butter Chicken">Butter Chicken</option>
+                        <option value="Tandoori Chicken">Tandoori Chicken</option>
+                    </optgroup>
+
+                    <!-- French Cuisines -->
+                    <optgroup label="French Cuisines">
+                        <option value="French Onion Soup">French Onion Soup</option>
+                        <option value="Croissant">Croissant</option>
+                        <option value="Chocolate Truffle">Chocolate Truffle</option>
+                    </optgroup>
+
+                    <!-- Chinese Cuisines -->
+                    <optgroup label="Chinese Cuisines">
+                        <option value="Noodles">Noodles</option>
+                        <option value="Spring Roll">Spring Roll</option>
+                        <option value="Mapo Tofu">Mapo Tofu</option>
+                    </optgroup>
+
+                    <!-- American Cuisines -->
+                    <optgroup label="American Cuisines">
+                        <option value="Cheese Burger">Cheese Burger</option>
+                        <option value="Apple Pie">Apple Pie</option>
+                        <option value="Hot Dog">Hot Dog</option>
+                    </optgroup>
+                </select>
+                <span id="cuisineError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity" style="color: #1cc272;">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" min="1" max="20">
+                <span id="quantityError" class="error"></span>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="validateForm()">Submit Order</button>
+            <div id="formSuccess" class="success"></div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Clear any existing error messages
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('phoneError').innerText = '';
+            document.getElementById('cuisineError').innerText = '';
+            document.getElementById('quantityError').innerText = '';
+            document.getElementById('formSuccess').innerText = '';
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var cuisine = document.getElementById('cuisine').value;
+            var quantity = document.getElementById('quantity').value;
+
+            var valid = true;
+
+            if (name.trim() === '') {
+                document.getElementById('nameError').innerText = 'Please enter your name.';
+                valid = false;
+            }
+
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+                valid = false;
+            }
+
+            var phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById('phoneError').innerText = 'Please enter a valid 10-digit phone number.';
+                valid = false;
+            }
+
+            if (cuisine === '') {
+                document.getElementById('cuisineError').innerText = 'Please select a dish.';
+                valid = false;
+            }
+            if (quantity < 1 || quantity > 20) {
+                document.getElementById('quantityError').innerText = 'Please enter a quantity between 1 and 20.';
+                valid = false;
+            }
+            if (valid) {
+                alert('Order submitted successfully!');
+            }
+        }
+    </script>
+</body>
+
+</html>
