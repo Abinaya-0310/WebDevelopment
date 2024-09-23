@@ -1,331 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>Table Styling in BootStrap</title>
+    <title>Global Flavors Restaurant Menu</title>
     <style>
-        body{
-            background-color:rgb(228, 110, 110);
+        body {
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
         }
-        th{
+
+        h1, h2 {
             text-transform: uppercase;
-        }
-        table {
-    width: 100%;
-    border-collapse: collapse;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            margin: 0;
         }
 
-th, td {
-    border: 1px solid #fff;
-    text-align: center;
-    padding: 10px;
-    color: white;
-}
+        h1 {
+            font-size: 3rem;
+        }
 
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .menu-table {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 50px;
+        }
+
+        th {
+            background-color: #343a40;
+            color: white;
+            text-transform: uppercase;
+            padding: 15px;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #343a40;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #343a40;
+        }
+
+        .cuisine-header {
+            background-color: #050505;
+            color: #ffdf7e;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .menu-table tr:hover {
+            background-color: rgba(255, 193, 7, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .table-responsive {
+            margin: auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+        }
     </style>
-
 </head>
-<body style="font-family: 'Times New Roman', Times, serif;">
+
+<body>
     <div class="container">
-        <h1 style="text-align: center;">Global Flavors Restaurant</h1>
-        <h2 style="text-align: center;">Menu</h2>
+    <div class="card">
+        <h1 class="text-center">Global Flavors Restaurant</h1>
+        <h2 class="text-center">Menu</h2>
+
         <div class="table-responsive">
-            <table class="table ">
-                <thread>
+            <table class="table table-hover menu-table table-bordered">
+                <thead>
                     <tr>
                         <th>S.No</th>
                         <th>Items</th>
                         <th>Price</th>
                     </tr>
-                </thread>
+                </thead>
                 <tbody>
-                    <tr>
-                        <th style="text-align: center;">Italian Cuisines</th>
+                    <!-- Italian Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Italian Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">1</td>
+                        <td>1</td>
                         <td>Pizza</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">2</td>
-                        <td>Sphagetti</td>
+                        <td>2</td>
+                        <td>Spaghetti</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">3</td>
+                        <td>3</td>
                         <td>Truffle Pasta</td>
                         <td>₹130</td>
                     </tr>
                     <tr>
-                        <td scope="row">4</td>
-                        <td>Mushroom Risotte</td>
+                        <td>4</td>
+                        <td>Mushroom Risotto</td>
                         <td>₹120</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Greece Cuisines</th>
+
+                    <!-- Greek Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Greek Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">5</td>
+                        <td>5</td>
                         <td>Moussaka</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">6</td>
+                        <td>6</td>
                         <td>Greek Salad</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">7</td>
+                        <td>7</td>
                         <td>Spanakopita</td>
                         <td>₹200</td>
                     </tr>
                     <tr>
-                        <td scope="row">8</td>
+                        <td>8</td>
                         <td>Dolmades</td>
                         <td>₹150</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Spanish Cuisines</th>
+
+                    <!-- Spanish Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Spanish Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">9</td>
+                        <td>9</td>
                         <td>Paella</td>
                         <td>₹200</td>
                     </tr>
                     <tr>
-                        <td scope="row">10</td>
+                        <td>10</td>
                         <td>Patatas Bravas</td>
                         <td>₹120</td>
                     </tr>
                     <tr>
-                        <td scope="row">11</td>
+                        <td>11</td>
                         <td>Gazpacho</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">12</td>
+                        <td>12</td>
                         <td>Churros</td>
                         <td>₹100</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Germany Cuisines</th>
+
+                    <!-- German Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">German Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">13</td>
+                        <td>13</td>
                         <td>Sausage</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">14</td>
+                        <td>14</td>
                         <td>Currywurst</td>
                         <td>₹120</td>
                     </tr>
                     <tr>
-                        <td scope="row">15</td>
+                        <td>15</td>
                         <td>Schnitzel</td>
                         <td>₹150</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Thailand Cuisines</th>
+
+                    <!-- Thai Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Thai Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">16</td>
+                        <td>16</td>
                         <td>Tom Yum Goong</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">17</td>
+                        <td>17</td>
                         <td>Pad Thai</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">18</td>
+                        <td>18</td>
                         <td>Khao Pad</td>
                         <td>₹200</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Japanese Cuisines</th>
+
+                    <!-- Japanese Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Japanese Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">19</td>
+                        <td>19</td>
                         <td>Sushi</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">20</td>
-                        <td>Spring roll</td>
+                        <td>20</td>
+                        <td>Spring Roll</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">21</td>
+                        <td>21</td>
                         <td>Mapo Tofu</td>
                         <td>₹80</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Ukraine Cuisines</th>
+
+                    <!-- Ukrainian Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Ukrainian Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">22</td>
+                        <td>22</td>
                         <td>Borshch</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">23</td>
+                        <td>23</td>
                         <td>Deruny</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">24</td>
+                        <td>24</td>
                         <td>Holubtsi</td>
                         <td>₹200</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">French Cuisines</th>
+
+                    <!-- French Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">French Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">25</td>
+                        <td>25</td>
                         <td>French Onion Soup</td>
                         <td>₹80</td>
                     </tr>
                     <tr>
-                        <td scope="row">26</td>
+                        <td>26</td>
                         <td>Croissant</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">27</td>
+                        <td>27</td>
                         <td>Chocolate Truffle</td>
                         <td>₹150</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Mexican Cuisines</th>
+
+                    <!-- Mexican Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Mexican Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">28</td>
+                        <td>28</td>
                         <td>Tacos</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">29</td>
+                        <td>29</td>
                         <td>Guacamole</td>
                         <td>₹120</td>
                     </tr>
                     <tr>
-                        <td scope="row">30</td>
+                        <td>30</td>
                         <td>Enchiladas</td>
                         <td>₹200</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Chinese Cuisines</th>
+
+                    <!-- Chinese Cuisines -->
+                    <tr class="cuisine-header">
+                        <td colspan="3">Chinese Cuisines</td>
                     </tr>
                     <tr>
-                        <td scope="row">31</td>
+                        <td>31</td>
                         <td>Noodles</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">32</td>
-                        <td>Spring roll</td>
+                        <td>32</td>
+                        <td>Spring Roll</td>
                         <td>₹80</td>
                     </tr>
                     <tr>
-                        <td scope="row">33</td>
+                        <td>33</td>
                         <td>Mapo Tofu</td>
-                        <td>₹100</td>
+                        <td>₹80</td>
+                    </tr>
+                    <tr class="cuisine-header" >
+                        <th colspan="3" >Indian Cuisines</th>
                     </tr>
                     <tr>
-                        <th style="text-align: center;">Indian Cuisines</th>
-                    </tr>
-                    <tr>
-                        <td scope="row">34</td>
+                        <td >34</td>
                         <td>Biriyani</td>
                         <td>₹120</td>
                     </tr>
                     <tr>
-                        <td scope="row">35</td>
+                        <td >35</td>
                         <td>Butter Chicken</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">36</td>
+                        <td>36</td>
                         <td>Tandoori Chicken</td>
                         <td>₹150</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">USA Cuisines</th>
+                    <tr class="cuisine-header">
+                        <th colspan="3">USA Cuisines</th>
                     </tr>
                     <tr>
-                        <td scope="row">37</td>
+                        <td >37</td>
                         <td>Cheese Burger</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">38</td>
+                        <td>38</td>
                         <td>Apple Pie</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">39</td>
+                        <td>39</td>
                         <td>Hot Dog</td>
                         <td>₹80</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Georgian Cuisines</th>
+                    <tr class="cuisine-header">
+                        <th colspan="3">Georgian Cuisines</th>
                     </tr>
                     <tr>
-                        <td scope="row">40</td>
+                        <td >40</td>
                         <td>Khachapuri</td>
                         <td>₹200</td>
                     </tr>
                     <tr>
-                        <td scope="row">41</td>
+                        <td >41</td>
                         <td>Shaslik</td>
                         <td>₹120</td>
                     </tr>
                     <tr>
-                        <td scope="row">42</td>
+                        <td>42</td>
                         <td>Kharcho</td>
                         <td>₹100</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">Russian Cuisines</th>
+                    <tr class="cuisine-header">
+                        <th colspan="3">Russian Cuisines</th>
                     </tr>
                     <tr>
-                        <td scope="row">43</td>
+                        <td>43</td>
                         <td>Dumplings</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">44</td>
+                        <td>44</td>
                         <td>Blini</td>
                         <td>₹90</td>
                     </tr>
-                    <tr>
-                        <th style="text-align: center;">England Cuisines</th>
+                    <tr class="cuisine-header">
+                        <th colspan="3">England Cuisines</th>
                     </tr>
                     <tr>
-                        <td scope="row">45</td>
+                        <td>45</td>
                         <td>Fish and Chips</td>
                         <td>₹100</td>
                     </tr>
                     <tr>
-                        <td scope="row">46</td>
+                        <td>46</td>
                         <td>Shepherd's Pie</td>
                         <td>₹150</td>
                     </tr>
                     <tr>
-                        <td scope="row">47</td>
+                        <td>47</td>
                         <td>Yorkshire Pudding</td>
                         <td>₹100</td>
                     </tr>
+       
                 </tbody>
             </table>
         </div>
-        
     </div>
-    
-</body>
+    </div>
+    </body>
+
 </html>
+
+                  
