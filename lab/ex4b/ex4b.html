@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Flavors Restaurant</title>
+    <script>
+        let timer;
+        function bgChange() {
+            document.body.style.backgroundColor = 'rgb(255, 239, 213)'; /* Soft color for restaurant ambiance */
+        }
+        function start_timer() {
+            timer = setInterval(function () {
+                const today = new Date();
+                const format_time = today.toLocaleTimeString();
+                document.getElementById("time").value = format_time;
+            }, 1000);
+        }
+    </script>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block; 
+        }
+        .hidden-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            color: rgb(139, 69, 19); /* Warm color representing food */
+            font-size: 24px;
+        }
+        img {
+            transition: transform 0.4s ease;
+        }
+        .container:hover img {
+            transform: translateY(100px);
+        }
+        .container:hover .hidden-text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body onclick="bgChange()">
+    <center>
+        <br><br>
+        <h1>Welcome to Global Flavors Restaurant</h1>
+        <div class="container">
+            <input type="text" id="time" placeholder="Check the Time" onclick="start_timer()" readonly>
+            <h2 id="change">Explore Our Delicious Menu</h2>
+            <p id="hover">Hover to See Special Offers</p>
+            <br>
+            <div class="hidden-text"><b>Order Now!</b></div>
+            <img src="C:\Users\abhin\OneDrive\Documents\menuimg.jpg" alt="Delicious Food Image" width="400" height="300">
+        </div>    
+        <script>
+            document.getElementById("hover").addEventListener("mouseenter", function () {
+                document.getElementById("change").textContent = "Don't Miss Out on Today's Specials!";
+            });
+            document.getElementById("hover").addEventListener("mouseleave", function () {
+                document.getElementById("change").textContent = "Explore Our Global Flavors!";
+            });
+        </script>
+    </center>
+</body>
+</html>
