@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th, td {
+            text-align: center;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <form action="CalculateBillServlet" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Item</th>
+                    <th>Price (per unit)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="item" value="Pasta"></td>
+                    <td>Pasta</td>
+                    <td>$10</td>
+                    <td><input type="number" name="pasta_qty" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="item" value="Burger"></td>
+                    <td>Burger</td>
+                    <td>$8</td>
+                    <td><input type="number" name="burger_qty" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="item" value="Pizza"></td>
+                    <td>Pizza</td>
+                    <td>$12</td>
+                    <td><input type="number" name="pizza_qty" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="item" value="Coffee"></td>
+                    <td>Coffee</td>
+                    <td>$5</td>
+                    <td><input type="number" name="coffee_qty" value="0" min="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">Calculate Bill</button>
+    </form>
+</body>
+</html>

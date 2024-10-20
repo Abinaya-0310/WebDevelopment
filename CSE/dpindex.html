@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Prediction App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Death Prediction App</h1>
+
+        <form id="predictionForm">
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" min="0" required>
+            <br><br>
+
+            <h3>Select your food choices (Choose 5):</h3>
+            <div id="food-options"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3 id="result"></h3>
+        <div id="gifContainer"></div>
+    </div>
+
+    <script>
+        const foods = [
+            { name: "Broccoli" },
+            { name: "Burger" },
+            { name: "Salmon" },
+            { name: "Pizza" },
+            { name: "Spinach" },
+            { name: "Ice Cream" },
+            { name: "Chicken Breast" },
+            { name: "Chocolate" },
+            { name: "Quinoa" },
+            { name: "French Fries" },
+            { name: "Apple" },
+            { name: "Soda" },
+            { name: "Eggs" },
+            { name: "Fried Chicken" },
+            { name: "Avocado" },
+            { name: "Bacon" },
+            { name: "Oats" },
+            { name: "Cookies" },
+            { name: "Orange Juice" },
+            { name: "Grilled Fish" }
+        ];
+
+        function renderFoodOptions() {
+            const foodOptionsDiv = document.getElementById('food-options');
+            foods.forEach((food, index) => {
+                foodOptionsDiv.innerHTML += `
+                    <div class="food-item">
+                        <input type="checkbox" id="food-${index}" name="food" value="${food.name}" onchange="toggleFoodSelection(${index})">
+                        <label for="food-${index}">${food.name}</label>
+                    </div>
+                `;
+            });
+        }
+
+        function toggleFoodSelection(index) {
+            const checkboxes = document.querySelectorAll('input[name="food"]');
+            const checkedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+
+            if (checkedCount > 5) {
+                alert("You can only select 5 food items.");
+                document.getElementById(`food-${index}`).checked = false;
+            }
+        }
+
+        renderFoodOptions();
+
+        // Event listener for form submission
+        document.getElementById('predictionForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            const formData = new FormData(this);
+            const formEntries = Object.fromEntries(formData.entries());
+            formEntries.food = formData.getAll('food');  // Get all selected foods
+
+            // Send form data to the servlet
+            fetch('predictor', {
+                method: 'POST',
+                body: new URLSearchParams(formEntries)
+            })
+            .then(response => response.json())
+            .then(data => {
+                const yearsLeft = data.yearsLeft;
+
+                // Update the background image and GIF based on yearsLeft
+                let backgroundUrl = '';
+                let gifUrl = '';
+
+                if (yearsLeft < 20) {
+                    backgroundUrl = 'url("dp_danger.jpg")'; 
+                    gifUrl = 'dp_dan_bg.gif'; 
+                } else if (yearsLeft >= 20 && yearsLeft < 50) {
+                    backgroundUrl = 'url("dp_diet.jpg")';
+                    gifUrl = 'dp_diet_bg.gif'; 
+                } else {
+                    backgroundUrl = 'url("dp_safe1.jpg")'; 
+                    gifUrl = 'dp_saf_bg.gif'; 
+                }
+
+                // Update the page with the new background and GIF
+                document.body.style.backgroundImage = backgroundUrl;
+                document.getElementById('result').innerText = `Based on your choices, you have approximately ${yearsLeft} years left until you die.`;
+                document.getElementById('gifContainer').innerHTML = `<img src="${gifUrl}" alt="Prediction GIF" style="width: 50%; max-width: 400px;">`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

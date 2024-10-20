@@ -1,0 +1,71 @@
+body {
+    background-image: url("dp_bg.jpg");
+    background-size: cover; 
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: auto;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(243, 205, 205, 0.85); 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    max-width: 600px;
+    width: 100%; 
+}
+
+h1, h2 {
+    text-align: center;
+    color: black;
+    font-family: "Times New Roman", Times, serif; 
+}
+
+.food-list {
+    list-style: none;
+    padding: 0;
+}
+
+.food-item {
+    margin: 5px 0;
+    color: black;
+    font-family: "Times New Roman", Times, serif; 
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+select, input[type="number"] {
+    padding: 5px;
+    margin-top: 5px;
+    width: 200px;
+    color: black; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ccc; 
+    font-family: "Times New Roman", Times, serif; 
+}
+
+#gifContainer img {
+    width: 50%; 
+    max-width: 500px;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
