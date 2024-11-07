@@ -1,0 +1,38 @@
+<web-app>
+    <servlet>
+        <servlet-name>YourServlet</servlet-name>
+        <servlet-class>HelloWorld</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>YourServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeathPredictorServlet</servlet-name>
+        <servlet-class>DeathPredictorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeathPredictorServlet</servlet-name>
+        <url-pattern>/predictor</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CalculatorServlet</servlet-name>
+        <servlet-class>CalculatorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CalculatorServlet</servlet-name>
+        <url-pattern>/CalculatorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CalculateBillServlet</servlet-name>
+        <servlet-class>CalculateBillServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalculateBillServlet</servlet-name>
+        <url-pattern>/CalculateBillServlet</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
