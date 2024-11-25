@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <name>Margherita Pizza</name>
+        <description>Delicious pizza with tomato, cheese, and basil.</description>
+        <price>1200</price>
+    </item>
+    <item>
+        <name>Chicken Biryani</name>
+        <description>Spicy and flavorful biryani with chicken pieces.</description>
+        <price>800</price>
+    </item>
+    <item>
+        <name>Caesar Salad</name>
+        <description>Fresh salad with crisp lettuce, creamy dressing, and croutons.</description>
+        <price>350</price>
+    </item>
+    <item>
+        <name>Chocolate Lava Cake</name>
+        <description>Warm chocolate cake with a gooey molten center.</description>
+        <price>450</price>
+    </item>
+    <item>
+        <name>Cold Coffee</name>
+        <description>Chilled coffee with ice cream and a refreshing taste.</description>
+        <price>150</price>
+    </item>
+    <item>
+        <name>Vegetable Burger</name>
+        <description>Delicious burger with a vegetable patty and fresh veggies.</description>
+        <price>200</price>
+    </item>
+    <item>
+        <name>Butter Naan</name>
+        <description>Soft and fluffy Indian flatbread brushed with butter.</description>
+        <price>50</price>
+    </item>
+    <item>
+        <name>Paneer Butter Masala</name>
+        <description>Creamy curry with paneer cubes in a buttery tomato sauce.</description>
+        <price>400</price>
+    </item>
+    <item>
+        <name>Masala Dosa</name>
+        <description>Traditional South Indian crepe filled with spiced potato filling.</description>
+        <price>120</price>
+    </item>
+    <item>
+        <name>Gulab Jamun</name>
+        <description>Sweet dumplings soaked in rose-flavored sugar syrup.</description>
+        <price>100</price>
+    </item>
+    <item>
+        <name>Tandoori Chicken</name>
+        <description>Juicy and flavorful chicken roasted in a tandoor.</description>
+        <price>550</price>
+    </item>
+    <item>
+        <name>Pasta Alfredo</name>
+        <description>Italian pasta tossed in a creamy Alfredo sauce.</description>
+        <price>650</price>
+    </item>
+    <item>
+        <name>Spring Rolls</name>
+        <description>Fried rolls stuffed with vegetables and noodles.</description>
+        <price>180</price>
+    </item>
+    <item>
+        <name>Mixed Fruit Juice</name>
+        <description>Freshly blended juice with a mix of seasonal fruits.</description>
+        <price>120</price>
+    </item>
+    <item>
+        <name>Ice Cream Sundae</name>
+        <description>Delicious ice cream topped with nuts, syrup, and a cherry.</description>
+        <price>250</price>
+    </item>
+    <item>
+        <name>Mango Lassi</name>
+        <description>Refreshing yogurt drink blended with sweet mango pulp.</description>
+        <price>100</price>
+    </item>
+    <item>
+        <name>Grilled Fish</name>
+        <description>Perfectly grilled fish with herbs and lemon butter sauce.</description>
+        <price>700</price>
+    </item>
+    <item>
+        <name>Chicken Shawarma</name>
+        <description>Juicy chicken wrapped in flatbread with garlic sauce and pickles.</description>
+        <price>250</price>
+    </item>
+    <item>
+        <name>Vegetable Fried Rice</name>
+        <description>Flavorful fried rice with mixed vegetables.</description>
+        <price>300</price>
+    </item>
+</menu>
