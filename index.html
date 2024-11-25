@@ -4,16 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-top: 50px;
+            font-size: 36px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 15px 25px;
+            margin: 15px 0;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        a:active {
+            background-color: #3e8e41;
+            transform: scale(1);
+        }
+        a {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(72, 172, 41, 0.5);
+        }
+        .links-container {
+            margin-top: 100px;
+        }
+        .links-container a {
+            margin: 20px 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f0f8ff, #e0ffff);
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <a href="lab/ex1/world.html">exercise 1</a>
-    <br>
-    <a href="lab/ex2/homepage.html">exercise 2</a>
-    <br>
-    <a href="lab/ex3/menu.html">exercise 3</a>
-    <br>
-    <a href="lab/ex4/order.html">exercise 4a</a>
-    <br>
-    <a href="lab/ex4b/ex4b.html">exercise 4b</a>
+    <div class="links-container">
+        <h1>Exercises</h1>
+        <a href="lab/ex1/world.html">Exercise 1</a>
+        <a href="lab/ex2/homepage.html">Exercise 2</a>
+        <a href="lab/ex3/menu.html">Exercise 3</a>
+        <a href="lab/ex4/order.html">Exercise 4a</a>
+        <a href="lab/ex4b/ex4b.html">Exercise 4b</a>
+    </div>
 </body>
 </html>
