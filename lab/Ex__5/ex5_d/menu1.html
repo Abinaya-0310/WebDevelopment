@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <div class="menu-item">
+        <h3>Margherita Pizza - ₹1200</h3>
+        <p>Delicious pizza with tomato, cheese, and basil.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1"> <!-- This should be dynamically set after login -->
+            <input type="hidden" name="order_details" value="1x Margherita Pizza">
+            <input type="hidden" name="total_price" value="1200">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Chicken Biryani - ₹800</h3>
+        <p>Spicy and flavorful biryani with chicken pieces.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Chicken Biryani">
+            <input type="hidden" name="total_price" value="800">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Caesar Salad - ₹350</h3>
+        <p>Fresh salad with crisp lettuce, creamy dressing, and croutons.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Caesar Salad">
+            <input type="hidden" name="total_price" value="350">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Chocolate Lava Cake - ₹450</h3>
+        <p>Warm chocolate cake with a gooey molten center.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Chocolate Lava Cake">
+            <input type="hidden" name="total_price" value="450">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Cold Coffee - ₹150</h3>
+        <p>Chilled coffee with ice cream and a refreshing taste.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Cold Coffee">
+            <input type="hidden" name="total_price" value="150">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Vegetable Burger - ₹200</h3>
+        <p>Delicious burger with a vegetable patty and fresh veggies.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Vegetable Burger">
+            <input type="hidden" name="total_price" value="200">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>French Fries - ₹180</h3>
+        <p>Crispy and golden fries, perfect for a snack.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x French Fries">
+            <input type="hidden" name="total_price" value="180">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Paneer Tikka - ₹350</h3>
+        <p>Grilled cottage cheese marinated in spices and served with chutney.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Paneer Tikka">
+            <input type="hidden" name="total_price" value="350">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Spaghetti Carbonara - ₹650</h3>
+        <p>Classic Italian pasta with creamy sauce and crispy bacon.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Spaghetti Carbonara">
+            <input type="hidden" name="total_price" value="650">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Veggie Pizza - ₹1100</h3>
+        <p>Pizza topped with a variety of fresh vegetables.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Veggie Pizza">
+            <input type="hidden" name="total_price" value="1100">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Garlic Bread - ₹180</h3>
+        <p>Toasted bread with garlic butter and herbs.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Garlic Bread">
+            <input type="hidden" name="total_price" value="180">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Butter Chicken - ₹900</h3>
+        <p>Rich and creamy chicken curry served with naan.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Butter Chicken">
+            <input type="hidden" name="total_price" value="900">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Veg Pulao - ₹550</h3>
+        <p>Aromatic rice with mixed vegetables and mild spices.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Veg Pulao">
+            <input type="hidden" name="total_price" value="550">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Fish Curry - ₹700</h3>
+        <p>Spicy fish curry made with fresh catch and aromatic spices.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Fish Curry">
+            <input type="hidden" name="total_price" value="700">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Mango Lassi - ₹120</h3>
+        <p>Refreshing yogurt-based drink with mango flavor.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Mango Lassi">
+            <input type="hidden" name="total_price" value="120">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Prawn Masala - ₹950</h3>
+        <p>Spicy prawn curry cooked with fresh spices and herbs.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Prawn Masala">
+            <input type="hidden" name="total_price" value="950">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <h3>Veg Hakka Noodles - ₹400</h3>
+        <p>Stir-fried noodles with vegetables and Chinese spices.</p>
+        <form action="OrderServlet" method="POST">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="order_details" value="1x Veg Hakka Noodles">
+            <input type="hidden" name="total_price" value="400">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
